@@ -121,9 +121,9 @@ Once you have a solvable problem and an audience who'd like it solved, you have 
 - What technologies will it use?
 - What additional features will it have?
 
-Additionally, please include a pencil and paper wireframe with your answers. Included in this repository is a [template](template.pdf) wireframe that can be printed out on 11×17 inch paper. Here's an example of how a past student used this template.
+Additionally, please include a pencil and paper wireframe with your answers. Included in this repository is a [template](img/template.pdf) wireframe that can be printed out on 11×17 inch paper. Here's an example of how a past student used this template.
 
-![](brewify.jpg)
+![](img/brewify.jpg)
 
 Remember, you're _not_ expected to discover and publish a brand new idea so keep your project ideas simple. And you _must_ submit your proposals to an instructor for approval before you start translating one of your ideas into code.
 
@@ -157,7 +157,7 @@ Even with the best of intentions and preparation, things won't go as planned and
 
 The number one thing that affects a student's performance during project week is losing confidence in oneself. Remember, web development is hard and it's still fairly new to you. If you're feeling down on yourself, consider one of these alternate ways of thinking.
 
-![](growth_mindset.jpg)
+![](img/growth_mindset.jpg)
 
 ### Demonstrate your project to the class
 
