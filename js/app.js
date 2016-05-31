@@ -1,6 +1,9 @@
 // Google Maps API key: AIzaSyClyM6WEEfq2z5cOzBtedaQfia7FFjam1U
 
 (function() {
+
+  $('.scrollspy').scrollSpy();
+  
   // var map;
   // function initMap() {
   //   map = new google.maps.Map(document.getElementById('map'), {
