@@ -5,12 +5,15 @@ html, body {
   background-image: url(../img/cover.jpg);
   background-size: cover;
   height: 500px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: flex-start;
   align-items: center;
+}
+.hero h1 {
+  margin-top: 60px;
 }
 .camp-name {
   height: 60px;
@@ -25,7 +28,6 @@ html, body {
   width: 90%;
   margin-left: 15px;
 }
-
 
 
 .ebony-clay {
