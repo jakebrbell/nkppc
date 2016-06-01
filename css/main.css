@@ -17,46 +17,57 @@ html, body {
 }
 .camp-name {
   height: 60px;
+  padding: 17px 5px;
+  background-color: #C9ADA7;
+  color: #22223B;
+}
+.camp-name:hover {
+  cursor: pointer;
 }
 #map {
   height: 300px;
   margin: 0 auto;
   width: 100%;
 }
-
+.facts, .testimonials, .satellite-photo {
+  display: none;
+}
 .satellite {
   width: 90%;
   margin-left: 15px;
 }
-
+.active-button {
+  background-color: #22223B;
+  color: #F2E9E4;
+}
 
 .ebony-clay {
   background-color: #22223B !important;
 }
 .ebony-clay-text {
-  color: #22223B !important;
+  color: #22223B;
 }
 .mulled-wine {
-  background-color: #4A4E69 !important;
+  background-color: #4A4E69;
 }
 .mulled-wine-text {
-  color: #4A4E69 !important;
+  color: #4A4E69;
 }
 .venus {
-  background-color: #9A8C98 !important;
+  background-color: #9A8C98;
 }
 .venus-text {
-  color: #9A8C98 !important;
+  color: #9A8C98;
 }
 .clam-shell {
-  background-color: #C9ADA7 !important;
+  background-color: #C9ADA7;
 }
 .clam-shell-text {
-  color: #C9ADA7 !important;
+  color: #C9ADA7;
 }
 .dawn-pink {
-  background-color: #F2E9E4 !important;
+  background-color: #F2E9E4;
 }
 .dawn-pink-text {
-  color: #F2E9E4 !important;
+  color: #F2E9E4;
 }
