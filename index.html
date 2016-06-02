@@ -8,20 +8,21 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="css/materialize.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
-  <body class="clam-shell">
-    <div class="navbar-fixed">
+  <body class="venus">
+    <div class="navbar-fixed scrollspy" id="top">
       <nav class="ebony-clay">
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo dawn-pink-text">North Korean Political Prison Camps</a>
+          <a href="#top" class="brand-logo dawn-pink-text">North Korean Political Prison Camps</a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#issue" class="dawn-pink-text active">The Issue</a></li>
             <li><a href="#political-prison-camps" class="dawn-pink-text">Political Prison Camps</a></li>
             <li><a href="#report" class="dawn-pink-text">The Report</a></li>
-            <li><a href="#additional-reading" class="dawn-pink-text">Additional Reading</a></li>
+            <li><a href="#additional-reading" class="dawn-pink-text">Additional Information</a></li>
           </ul>
         </div>
       </nav>
@@ -32,10 +33,10 @@
     </div>
 
     <div class="container">
-      <div class="row card dawn-pink">
-        <div class="col s12">
+      <section class="row card clam-shell issue">
+        <div class="col s12 flow-text">
           <h2 class="center-align ebony-clay-text">The Issue</h2>
-          <p class="section scrollspy" id="issue">Political prison camps are the source of some of the greatest atrocities committed in North Korea. They have lasted five times as long as the Nazi concentration camps and twice as long as the Soviet Gulags that inspired their creation. Their purpose is to detain (in most cases, for life) citizens who have committed “political crimes”—actions contradictory to the government’s wishes, but generally not considered criminal elsewhere in the world.</p>
+          <p class="scrollspy" id="issue">Political prison camps are the source of some of the greatest atrocities committed in North Korea. They have lasted five times as long as the Nazi concentration camps and twice as long as the Soviet Gulags that inspired their creation. Their purpose is to detain (in most cases, for life) citizens who have committed “political crimes”—actions contradictory to the government’s wishes, but generally not considered criminal elsewhere in the world.</p>
 
           <p>An estimated 80,000 to 120,000 people are currently being detained in the four large prison camps known to exist in North Korea today. The North Korean regime refuses to acknowledge the existence of these camps and it is likely that there are additional, so far undetected secret detention facilities, where political prisoners are detained under similar conditions.</p>
         </div>
@@ -51,72 +52,93 @@
           <h4 class="center-align ebony-clay-text">How do we know?</h4>
           <p>We now have testimonies from several former prisoners from different camps, as well as former guards who have defected. The validity of the evidence provided by these people is supported by how much these testimonies corroborate each other, and also because they have been corroborated by satellite images of the camps.</p>
         </div>
-      </div>
+      </section>
 
-      <div class="row card dawn-pink">
+      <div class="row card clam-shell">
         <div class="col s12">
           <h2 class="center-align ebony-clay-text">Political Prison Camps</h2>
           <div class="col s3 camp-buttons">
-            <div class="camp-name card valign center-align section scrollspy" id="political-prison-camps">
+            <div class="camp-name card valign center-align section scrollspy waves-effect" id="political-prison-camps">
               Camp Number 14
             </div>
-            <div class="camp-name card valign center-align">
+            <div class="camp-name card valign center-align waves-effect">
               Camp Number 15
             </div>
-            <div class="camp-name card valign center-align">
+            <div class="camp-name card valign center-align waves-effect">
               Camp Number 16
             </div>
-            <div class="camp-name card valign center-align">
+            <div class="camp-name card valign center-align waves-effect">
               Camp Number 25
             </div>
           </div>
-          <div class="col s9 card">
+          <div class="col s9 card map-container">
             <div id="map"></div>
           </div>
         </div>
-        <div class="col s3">
-          <div class="card facts">
-            <h4 class="center-align ebony-clay-text">Facts</h4>
-            <h5 class="center-align">Size:</h5>
-            <p class="center-align">150 square kilometers</p>
-            <h5 class="center-align">Location:</h5>
-            <p class="center-align">Near Kaechon City in South Pyongan Province</p>
-            <h5 class="center-align">Open since:</h5>
-            <p class="center-align">1960s</p>
-            <h5 class="center-align">Other details:</h5>
-            <ul class="center-align">
-              <li>All inmates are incarcerated for life</li>
-              <li>Shin Dong-hyuk is the only prisoner known to have successfully escaped the camp</li>
-              <li>The camp appears to have been expanded since 2005</li>
-            </ul>
+        <div class="col s12">
+          <div class="col s12 m3">
+            <div class="card facts dawn-pink">
+              <h4 class="center-align ebony-clay-text">Facts</h4>
+              <h5>Size:</h5>
+              <p class="size"></p>
+              <h5>Location:</h5>
+              <p class="location"></p>
+              <h5>Open since:</h5>
+              <p class="open-since"></p>
+              <h5>Other details:</h5>
+              <ul class="details"></ul>
+            </div>
           </div>
-        </div>
-        <div class="col s5">
-          <div class="card testimonials">
-            <h4 class="center-align ebony-clay-text">Testimonials</h4>
-            <p>Mr Shin Dong-hyuk was born in Political Prison Camp No. 14 in 1981, as a result of a relationship the guards had arranged between his parents, who had no choice in the matter. His father and his family had apparently been imprisoned in the camp, because one of Mr Shin’s uncles had fled to the Republic of Korea. Mr Shin never found out why his mother was in the camp. Mr Shin described how he had been indoctrinated to internalize the guilt by family association principle that he never questioned the basis and conditions of his imprisonment:</p>
+          <div class="col s12 m5">
+            <div class="card testimonials dawn-pink">
+              <h4 class="center-align ebony-clay-text">Testimonials</h4>
+              <p>Mr Shin Dong-hyuk was born in Political Prison Camp No. 14 in 1981, as a result of a relationship the guards had arranged between his parents, who had no choice in the matter. His father and his family had apparently been imprisoned in the camp, because one of Mr Shin’s uncles had fled to the Republic of Korea. Mr Shin never found out why his mother was in the camp. Mr Shin described how he had been indoctrinated to internalize the guilt by family association principle that he never questioned the basis and conditions of his imprisonment:</p>
 
-            <p>“I was born a criminal and I would die a criminal that was my fate … Where I lived only two kinds of people existed, the guards who had guns and the people who are inmates wearing uniforms. Inmates were born inmates, so we lived like inmates; that was our fate... Nobody taught us that way but that was all that we could see… so that’s how we lived.”</p>
+              <p>“I was born a criminal and I would die a criminal that was my fate … Where I lived only two kinds of people existed, the guards who had guns and the people who are inmates wearing uniforms. Inmates were born inmates, so we lived like inmates; that was our fate... Nobody taught us that way but that was all that we could see… so that’s how we lived.”</p>
+            </div>
           </div>
-        </div>
-        <div class="col s4">
-          <div class="card satellite-photo">
-            <h4 class="center-align ebony-clay-text">Satellite Photo</h4>
-            <img class="satellite" src="img/camp-14.png" alt="A satellite photo of Camp 14">
-            <p class="center-align">Click to enlarge</p>
+          <div class="col s12 m4">
+            <div class="card satellite-photo dawn-pink">
+              <h4 class="center-align ebony-clay-text">Satellite Photo</h4>
+              <p class="center-align"><em>Click photo to enlarge</em></p>
+              <img class="satellite modal-trigger" href="#modal">
+            </div>
+            <div id="modal" class="modal modal-fixed-footer">
+              <a href="#!" class=" modal-action modal-close waves-effect btn-flat right-align">Close</a>
+              <div class="modal-content">
+                <img class="modal-image" src="img/camp-16.png" alt="A satellite photo of Camp 14">
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row card dawn-pink">
-        <div class="col s12">
-          <h2 class="center-align section scrollspy ebony-clay-text" id="report">The Report</h2>
+      <div class="row card clam-shell report">
+        <div class="col s12 flow-text">
+          <h2 class="center-align ebony-clay-text">The Report</h2>
+          <p class="scrollspy" id="report">In its resolution 22/13, adopted on 21 March 2013, the Human Rights Council established the commission of inquiry on human rights in the Democratic People’s Republic of Korea. In resolution 22/13, the Council mandated the commission to investigate the systematic, widespread and grave violations of human rights in the State, with a view to ensuring full accountability, in particular, for violations that may amount to crimes against humanity.</p>
+
+          <p>Reading the two paragraphs together, the commission determined that it had been mandated to investigate the systematic, widespread and grave violations of human rights in the Democratic People’s Republic of Korea including, in particular, the following nine specific substantive areas: Violations of the right to food, the full range of violations associated with prison camps, torture and inhuman treatment, arbitrary arrest and detention, discrimination—in particular in the systemic denial and violation of basic human rights and fundamental freedoms, violations of the freedom of expression, violations of the right to life, violations of the freedom of movement, enforced disappearances in the form of abductions of nationals of other States.</p>
+
+          <p>More than 80 witnesses and experts testified publicly and provided information of great specificity, detail and relevance. The commission and its secretariat conducted more than 240 confidential interviews with victims and other witnesses.</p>
+
+          <p>In July 2013, the commission made a call for written submissions to all States Members of the United Nations and relevant stakeholders. At the finalization of the present report, 80 such submissions had been received.</p>
+
+          <p>The commission finds that systematic, widespread and gross human rights violations have been and are being committed by the Democratic People’s Republic of Korea. In many instances, the violations found entailed crimes against humanity based on State policies.</p>
+
+          <p>The commission estimates that hundreds of thousands of political prisoners have perished in these camps over the past five decades. The unspeakable atrocities that are being committed against inmates of the kwanliso political prison camps resemble the horrors of camps that totalitarian States established during the twentieth century.</p>
+
+          <p>Persons who are found to have engaged in major political crimes are “disappeared”, without trial or judicial order, to political prison camps (kwanliso). There, they are incarcerated and held incommunicado. Their families are not even informed of their fate if they die. In the past, it was common that the authorities sent entire families to political prison camps for political crimes committed by close relatives (including forebears, to the third generation) on the basis of the principle of guilt by association.</p>
+
+          <p>According to that standard, the commission finds that the body of testimony and other information it received establishes that crimes against humanity have been committed in the Democratic People’s Republic of Korea, pursuant to policies established at the highest level of the State.</p>
+
+          <p>These crimes against humanity entail extermination, murder, enslavement, torture, imprisonment, rape, forced abortions and other sexual violence, persecution on political, religious, racial and gender grounds, the forcible transfer of populations, the enforced disappearance of persons and the inhumane act of knowingly causing prolonged starvation. The commission further finds that crimes against humanity are ongoing in the Democratic People’s Republic of Korea because the policies, institutions and patterns of impunity that lie at their heart remain in place.</p>
         </div>
       </div>
 
-      <div class="row card dawn-pink">
+      <div class="row card clam-shell additional-info">
         <div class="col s12">
-          <h2 class="center-align section scrollspy ebony-clay-text" id="additional-reading">Additional Reading</h2>
+          <h2 class="center-align scrollspy ebony-clay-text" id="additional-reading">Additional Information</h2>
         </div>
       </div>
     </div>

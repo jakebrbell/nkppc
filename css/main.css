@@ -6,6 +6,7 @@ h2 {
   border-top: solid 3px #252323;
   font-family: 'Coming Soon', cursive;
   padding: 7px 0;
+  font-weight: bold;
 }
 .hero{
   background-image: url(../img/cover.jpg);
@@ -21,6 +22,7 @@ h2 {
 .hero h1 {
   margin-top: 60px;
   font-family: 'Coming Soon', cursive;
+  font-weight: bold;
 }
 .camp-name {
   height: 63.5px;
@@ -84,8 +86,8 @@ h2 {
 }
 
 .modal {
-  width: 80% !important;
-  max-height: 80%;
+  width: 82% !important;
+  max-height: 80% !important;
 }
 
 .map-container {
@@ -113,4 +115,19 @@ h4 {
 
 .facts p, .facts ul {
   margin-top: 5px;
+}
+
+.brand-logo {
+  margin-left: 10px;
+}
+nav ul a {
+  font-size: 1.1rem;
+}
+
+.satellite-photo p {
+  margin-bottom: 5px;
+}
+.issue, .report, .additional-info {
+  padding-left: 20px;
+  padding-right: 20px;
 }
