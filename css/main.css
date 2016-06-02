@@ -1,6 +1,12 @@
 html, body {
   height: 100%;
 }
+h2 {
+  border-bottom: solid 3px #252323;
+  border-top: solid 3px #252323;
+  font-family: 'Coming Soon', cursive;
+  padding: 7px 0;
+}
 .hero{
   background-image: url(../img/cover.jpg);
   background-size: cover;
@@ -14,12 +20,14 @@ html, body {
 }
 .hero h1 {
   margin-top: 60px;
+  font-family: 'Coming Soon', cursive;
 }
 .camp-name {
-  height: 60px;
-  padding: 17px 5px;
-  background-color: #C9ADA7;
-  color: #22223B;
+  height: 63.5px;
+  padding: 20px 5px;
+  background-color: #252323;
+  color: #F5F1ED;
+  font-weight: bold;
 }
 .camp-name:hover {
   cursor: pointer;
@@ -28,46 +36,81 @@ html, body {
   height: 300px;
   margin: 0 auto;
   width: 100%;
+  border: 5px solid #252323;
 }
 .facts, .testimonials, .satellite-photo {
   display: none;
+  height: 540px;
+  padding: 5px 15px;
 }
 .satellite {
   width: 90%;
   margin-left: 15px;
 }
 .active-button {
-  background-color: #22223B;
-  color: #F2E9E4;
+  background-color: #F5F1ED !important;
+  color: #252323;
 }
 
 .ebony-clay {
-  background-color: #22223B !important;
+  background-color: #252323 !important;
 }
 .ebony-clay-text {
-  color: #22223B;
+  color: #252323;
 }
 .mulled-wine {
-  background-color: #4A4E69;
+  background-color: #A99985;
 }
 .mulled-wine-text {
-  color: #4A4E69;
+  color: #A99985;
 }
 .venus {
-  background-color: #9A8C98;
+  background-color: #737373;
 }
 .venus-text {
-  color: #9A8C98;
+  color: #737373;
 }
 .clam-shell {
-  background-color: #C9ADA7;
+  background-color: #DAD2BC;
 }
 .clam-shell-text {
-  color: #C9ADA7;
+  color: #DAD2BC;
 }
 .dawn-pink {
-  background-color: #F2E9E4;
+  background-color: #F5F1ED;
 }
 .dawn-pink-text {
-  color: #F2E9E4;
+  color: #F5F1ED;
+}
+
+.modal {
+  width: 80% !important;
+  max-height: 80%;
+}
+
+.map-container {
+  padding: 0 !important;
+}
+
+.facts ul li {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.facts h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+h4 {
+  border-bottom: 1px solid #252323;
+}
+
+.waves-effect {
+  display: block !important;
+}
+
+.facts p, .facts ul {
+  margin-top: 5px;
 }
