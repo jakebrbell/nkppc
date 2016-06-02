@@ -45,6 +45,7 @@ function initMap() {
     origin: new google.maps.Point(0, 0)
   }
 
+  // Create google maps marker for each prison camp
   camp14Marker = new google.maps.Marker();
   camp15Marker = new google.maps.Marker();
   camp16Marker = new google.maps.Marker();
@@ -62,6 +63,7 @@ function initMap() {
         return;
     }
 
+    // Set positions and titles for google maps markers of each prison camp
     camp14Marker.setPosition({lat: data.camp14.latitude, lng: data.camp14.longitude});
     camp14Marker.setTitle(data.camp14.name);
 
@@ -159,8 +161,10 @@ function initMap() {
     });
   });
 
+  // Initialize Materialize scrollspy
   $('.scrollspy').scrollSpy();
 
+  // Initialize Materialize materialbox for enlarging images
   $(document).ready(function(){
    $('.materialboxed').materialbox();
  });
@@ -175,17 +179,20 @@ function initMap() {
     $('.testimonials').fadeIn();
     $('.satellite-photo').fadeIn();
   };
+
+  // Create and append list elements for the details about each camp
   var createDetails = function(arr) {
     $('.details').empty();
     for (var string of arr) {
       $('.details').append($('<li>' + string + '</li>'));
     }
   };
+
+  // Create and append paragraph elements for the testimonials about each camp
   var createTestimonials = function(arr) {
     $('.testimonials').empty().append('<h4 class="center-align ebony-clay-text">Testimonials</h4>');
     for (var string of arr) {
       $('.testimonials').append($('<p>' + string + '</p>'));
     }
   };
-
 })();
