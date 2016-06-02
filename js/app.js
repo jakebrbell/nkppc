@@ -77,80 +77,81 @@ function initMap() {
     $('.camp-buttons').on('click', function(event) {
       var $target = $(event.target);
 
-      if ($target.text().trim() === 'Camp Number 14') {
-        camp14Marker.setMap(map);
-        camp15Marker.setMap(null);
-        camp16Marker.setMap(null);
-        camp25Marker.setMap(null);
+      $('.map-dialog').fadeOut(50, function(){
+        if ($target.text().trim() === 'Camp Number 14') {
+          camp14Marker.setMap(map);
+          camp15Marker.setMap(null);
+          camp16Marker.setMap(null);
+          camp25Marker.setMap(null);
 
-        $('.camp-name').removeClass('active-button');
-        $target.addClass('active-button');
+          $('.camp-name').removeClass('active-button');
+          $target.addClass('active-button');
 
-        fadeOutContent();
-        $('.size').text(data.camp14.size);
-        $('.location').text(data.camp14.location);
-        $('.open-since').text(data.camp14.openSince);
-        createDetails(data.camp14.details);
-        $('.satellite, .modal-image').attr({ 'src': 'img/camp-14.png', 'alt': 'A satellite photo of Camp 14'});
-        $('#modal').scrollTop(0);
-        fadeInContent();
-      }
-      else if ($target.text().trim() === 'Camp Number 15') {
-        camp14Marker.setMap(null);
-        camp15Marker.setMap(map);
-        camp16Marker.setMap(null);
-        camp25Marker.setMap(null);
+          fadeOutContent();
+          $('.size').text(data.camp14.size);
+          $('.location').text(data.camp14.location);
+          $('.open-since').text(data.camp14.openSince);
+          createDetails(data.camp14.details);
+          $('.satellite, .modal-image').attr({ 'src': 'img/camp-14.png', 'alt': 'A satellite photo of Camp 14'});
+          $('#modal').scrollTop(0);
+          fadeInContent();
+        }
+        else if ($target.text().trim() === 'Camp Number 15') {
+          camp14Marker.setMap(null);
+          camp15Marker.setMap(map);
+          camp16Marker.setMap(null);
+          camp25Marker.setMap(null);
 
-        $('.camp-name').removeClass('active-button');
-        $target.addClass('active-button');
+          $('.camp-name').removeClass('active-button');
+          $target.addClass('active-button');
 
-        fadeOutContent();
-        $('.size').text(data.camp15.size);
-        $('.location').text(data.camp15.location);
-        $('.open-since').text(data.camp15.openSince);
-        createDetails(data.camp15.details);
-        $('.satellite, .modal-image').attr({ 'src': 'img/camp-15.png', 'alt': 'A satellite photo of Camp 15'});
-        $('#modal').scrollTop(0);
-        fadeInContent();
-      }
-      else if ($target.text().trim() === 'Camp Number 16') {
-        camp14Marker.setMap(null);
-        camp15Marker.setMap(null);
-        camp16Marker.setMap(map);
-        camp25Marker.setMap(null);
+          fadeOutContent();
+          $('.size').text(data.camp15.size);
+          $('.location').text(data.camp15.location);
+          $('.open-since').text(data.camp15.openSince);
+          createDetails(data.camp15.details);
+          $('.satellite, .modal-image').attr({ 'src': 'img/camp-15.png', 'alt': 'A satellite photo of Camp 15'});
+          $('#modal').scrollTop(0);
+          fadeInContent();
+        }
+        else if ($target.text().trim() === 'Camp Number 16') {
+          camp14Marker.setMap(null);
+          camp15Marker.setMap(null);
+          camp16Marker.setMap(map);
+          camp25Marker.setMap(null);
 
-        $('.camp-name').removeClass('active-button');
-        $target.addClass('active-button');
+          $('.camp-name').removeClass('active-button');
+          $target.addClass('active-button');
 
-        fadeOutContent();
-        $('.size').text(data.camp16.size);
-        $('.location').text(data.camp16.location);
-        $('.open-since').text(data.camp16.openSince);
-        createDetails(data.camp16.details);
-        $('.satellite, .modal-image').attr({ 'src': 'img/camp-16.png', 'alt': 'A satellite photo of Camp 16'});
-        $('.modal').scrollTop(0);
-        fadeInContent();
-      }
-      else if ($target.text().trim() === 'Camp Number 25') {
-        camp14Marker.setMap(null);
-        camp15Marker.setMap(null);
-        camp16Marker.setMap(null);
-        camp25Marker.setMap(map);
+          fadeOutContent();
+          $('.size').text(data.camp16.size);
+          $('.location').text(data.camp16.location);
+          $('.open-since').text(data.camp16.openSince);
+          createDetails(data.camp16.details);
+          $('.satellite, .modal-image').attr({ 'src': 'img/camp-16.png', 'alt': 'A satellite photo of Camp 16'});
+          $('.modal').scrollTop(0);
+          fadeInContent();
+        }
+        else if ($target.text().trim() === 'Camp Number 25') {
+          camp14Marker.setMap(null);
+          camp15Marker.setMap(null);
+          camp16Marker.setMap(null);
+          camp25Marker.setMap(map);
 
-        $('.camp-name').removeClass('active-button');
-        $target.addClass('active-button');
+          $('.camp-name').removeClass('active-button');
+          $target.addClass('active-button');
 
-        fadeOutContent();
-        $('.size').text(data.camp25.size);
-        $('.location').text(data.camp25.location);
-        $('.open-since').text(data.camp25.openSince);
-        createDetails(data.camp25.details);
-        $('.satellite, .modal-image').attr({ 'src': 'img/camp-25.png', 'alt': 'A satellite photo of Camp 25'});
-        $('.modal').scrollTop(0);
-        fadeInContent();
-      }
+          fadeOutContent();
+          $('.size').text(data.camp25.size);
+          $('.location').text(data.camp25.location);
+          $('.open-since').text(data.camp25.openSince);
+          createDetails(data.camp25.details);
+          $('.satellite, .modal-image').attr({ 'src': 'img/camp-25.png', 'alt': 'A satellite photo of Camp 25'});
+          $('.modal').scrollTop(0);
+          fadeInContent();
+        }
+      });
     });
-
   });
 
   $('.scrollspy').scrollSpy();
