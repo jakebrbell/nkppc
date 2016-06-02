@@ -76,6 +76,7 @@ function initMap() {
 
     $('.camp-buttons').on('click', function(event) {
       var $target = $(event.target);
+      console.log(data.camp14.testimonials);
 
       $('.map-dialog').fadeOut(50, function(){
         if ($target.text().trim() === 'Camp Number 14') {
@@ -92,6 +93,7 @@ function initMap() {
           $('.location').text(data.camp14.location);
           $('.open-since').text(data.camp14.openSince);
           createDetails(data.camp14.details);
+          createTestimonials(data.camp14.testimonials);
           $('.satellite, .modal-image').attr({ 'src': 'img/camp-14.png', 'alt': 'A satellite photo of Camp 14'});
           $('#modal').scrollTop(0);
           fadeInContent();
@@ -110,6 +112,7 @@ function initMap() {
           $('.location').text(data.camp15.location);
           $('.open-since').text(data.camp15.openSince);
           createDetails(data.camp15.details);
+          createTestimonials(data.camp15.testimonials);
           $('.satellite, .modal-image').attr({ 'src': 'img/camp-15.png', 'alt': 'A satellite photo of Camp 15'});
           $('#modal').scrollTop(0);
           fadeInContent();
@@ -128,6 +131,7 @@ function initMap() {
           $('.location').text(data.camp16.location);
           $('.open-since').text(data.camp16.openSince);
           createDetails(data.camp16.details);
+          createTestimonials(data.camp16.testimonials);
           $('.satellite, .modal-image').attr({ 'src': 'img/camp-16.png', 'alt': 'A satellite photo of Camp 16'});
           $('.modal').scrollTop(0);
           fadeInContent();
@@ -146,6 +150,7 @@ function initMap() {
           $('.location').text(data.camp25.location);
           $('.open-since').text(data.camp25.openSince);
           createDetails(data.camp25.details);
+          createTestimonials(data.camp25.testimonials);
           $('.satellite, .modal-image').attr({ 'src': 'img/camp-25.png', 'alt': 'A satellite photo of Camp 25'});
           $('.modal').scrollTop(0);
           fadeInContent();
@@ -174,6 +179,12 @@ function initMap() {
     $('.details').empty();
     for (var string of arr) {
       $('.details').append($('<li>' + string + '</li>'));
+    }
+  };
+  var createTestimonials = function(arr) {
+    $('.testimonials').empty().append('<h4 class="center-align ebony-clay-text">Testimonials</h4>');
+    for (var string of arr) {
+      $('.testimonials').append($('<p>' + string + '</p>'));
     }
   };
 
