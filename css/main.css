@@ -94,9 +94,9 @@ h2 {
   padding: 0 !important;
 }
 
-.facts ul li {
+.facts ul li, .report ul li {
   list-style: disc;
-  margin-left: 20px;
+  margin-left: 25px;
   margin-bottom: 5px;
 }
 

@@ -92,8 +92,7 @@ function initMap() {
         $('.open-since').text(data.camp14.openSince);
         createDetails(data.camp14.details);
         $('.satellite, .modal-image').attr({ 'src': 'img/camp-14.png', 'alt': 'A satellite photo of Camp 14'});
-        console.log($('.modal-content').scrollTop());
-        console.log($('.modal').scrollTop());
+        $('#modal').scrollTop(0);
         fadeInContent();
       }
       else if ($target.text().trim() === 'Camp Number 15') {
@@ -156,11 +155,9 @@ function initMap() {
 
   $('.scrollspy').scrollSpy();
 
-  $('.modal-trigger').leanModal({
-      dismissible: true,
-      opacity: .5
-    }
-  );
+  $(document).ready(function(){
+   $('.materialboxed').materialbox();
+ });
 
   var fadeOutContent = function() {
     $('.facts').fadeOut();
