@@ -56,6 +56,10 @@ function initMap() {
 
 (function() {
 
+  $('.first-header').fadeIn(3000, function() {
+    $('.second-header').fadeIn(3000);
+  });
+
   var $xhr = $.getJSON('https://aqk5q11wx9.execute-api.us-east-1.amazonaws.com/test');
 
   $xhr.done(function(data) {

@@ -17,12 +17,19 @@ h2 {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
 }
 .hero h1 {
   margin-top: 60px;
+  margin-right: 20px;
+  margin-bottom: 10px;
   font-family: 'Coming Soon', cursive;
   font-weight: bold;
+  font-size: 50px;
+  display: none;
+}
+.hero h1:last-of-type {
+  margin-top: 10px;
 }
 .camp-name {
   height: 63.5px;
