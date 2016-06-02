@@ -146,3 +146,11 @@ nav ul a {
   font-size: 22px;
   text-align: center;
 }
+.report img {
+  width: 320px;
+}
+figure {
+  float: right;
+  font-size: 16px;
+  margin: 10px;
+}
