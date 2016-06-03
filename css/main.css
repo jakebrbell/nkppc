@@ -190,8 +190,27 @@ figure {
      -moz-transition: all 1s ease;
        -o-transition: all 1s ease;
           transition: all 1s ease;
+  float: left;
+  margin: 10px;
 }
 
 .book {
   padding: 15px !important;
+}
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.author {
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.book a {
+  font-size: 13px;
 }
