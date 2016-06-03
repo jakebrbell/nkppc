@@ -163,3 +163,7 @@ figure {
   font-size: 16px;
   margin: 10px;
 }
+
+.page-footer li {
+  margin-bottom: 5px;
+}
