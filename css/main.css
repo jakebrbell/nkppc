@@ -8,6 +8,13 @@ h2 {
   padding: 7px 0;
   font-weight: bold;
 }
+
+/*
+  ========================================
+  Hero styles
+  ========================================
+*/
+
 .hero{
   background-image: url(../img/cover.jpg);
   background-size: cover;
@@ -62,34 +69,40 @@ h2 {
   color: #252323;
 }
 
-.ebony-clay {
+/*
+  ========================================
+  Custom color pallette styles
+  ========================================
+*/
+
+.mine-shaft {
   background-color: #252323 !important;
 }
-.ebony-clay-text {
+.mine-shaft-text {
   color: #252323;
 }
-.mulled-wine {
+.hillary {
   background-color: #A99985;
 }
-.mulled-wine-text {
+.hillary-text {
   color: #A99985;
 }
-.venus {
+.dove-gray {
   background-color: #737373;
 }
-.venus-text {
+.dove-gray-text {
   color: #737373;
 }
-.clam-shell {
+.tana {
   background-color: #DAD2BC;
 }
-.clam-shell-text {
+.tana-text {
   color: #DAD2BC;
 }
-.dawn-pink {
+.spring-wood {
   background-color: #F5F1ED;
 }
-.dawn-pink-text {
+.spring-wood-text {
   color: #F5F1ED;
 }
 
@@ -166,4 +179,8 @@ figure {
 
 .page-footer li {
   margin-bottom: 5px;
+}
+
+.additional-info img {
+  height: 300px;
 }
