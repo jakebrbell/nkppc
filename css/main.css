@@ -214,3 +214,10 @@ figure {
 .book a {
   font-size: 13px;
 }
+.additional-info {
+  padding-bottom: 20px;
+}
+
+.video-container {
+  margin-bottom: 30px;
+}
