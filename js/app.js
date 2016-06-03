@@ -205,4 +205,11 @@ function initMap() {
       $('.testimonials').append($('<p>' + string + '</p>'));
     }
   };
+
+  $('.book-img').on('mouseenter', function() {
+    $(this).addClass('z-depth-5');
+  });
+  $('.book-img').on('mouseleave', function() {
+    $(this).removeClass('z-depth-5');
+  });
 })();
