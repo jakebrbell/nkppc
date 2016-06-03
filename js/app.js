@@ -95,6 +95,7 @@ function initMap() {
           $target.addClass('active-button');
 
           fadeOutContent();
+          $('.camp-info>h3').text(data.camp14.name);
           $('.size').text(data.camp14.size);
           $('.location').text(data.camp14.location);
           $('.open-since').text(data.camp14.openSince);
@@ -114,6 +115,7 @@ function initMap() {
           $target.addClass('active-button');
 
           fadeOutContent();
+          $('.camp-info>h3').text(data.camp15.name);
           $('.size').text(data.camp15.size);
           $('.location').text(data.camp15.location);
           $('.open-since').text(data.camp15.openSince);
@@ -133,6 +135,7 @@ function initMap() {
           $target.addClass('active-button');
 
           fadeOutContent();
+          $('.camp-info>h3').text(data.camp16.name);
           $('.size').text(data.camp16.size);
           $('.location').text(data.camp16.location);
           $('.open-since').text(data.camp16.openSince);
@@ -152,6 +155,7 @@ function initMap() {
           $target.addClass('active-button');
 
           fadeOutContent();
+          $('.camp-info>h3').text(data.camp25.name);
           $('.size').text(data.camp25.size);
           $('.location').text(data.camp25.location);
           $('.open-since').text(data.camp25.openSince);
@@ -174,11 +178,13 @@ function initMap() {
  });
 
   var fadeOutContent = function() {
+    $('.camp-info').fadeOut();
     $('.facts').fadeOut();
     $('.testimonials').fadeOut();
     $('.satellite-photo').fadeOut();
   };
   var fadeInContent = function() {
+    $('.camp-info').fadeIn();
     $('.facts').fadeIn();
     $('.testimonials').fadeIn();
     $('.satellite-photo').fadeIn();
