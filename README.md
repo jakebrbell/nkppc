@@ -34,5 +34,3 @@
 - What was the biggest challenge you had to overcome?
   - Not being able to find an existing API with the data I wanted to use and having to create my own was a challenge at first. I had to find the data and format it correctly and then read through different documentation and tutorials to figure out a working solution. I ran into a couple of CORS issues as well, but was able to figure it out.
   - I also had problems with certain effects not working on my page. I had a section fading out and fading back in with new content, but the content was changing before it fully faded out. I had to move entire sections of my code into a callback in the jQuery fadeOut function in order to get it to work correctly.
-- Create a portfolio on the [Galvanize student portal](http://students.galvanize.com).
-- Add a link to your project's production environment.
