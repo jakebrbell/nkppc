@@ -1,51 +1,55 @@
-function initMap() {
-  'use strict';
-
-  window.map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 40.3, lng: 127.8 },
-    zoom: 6,
-    disableDefaultUI: true,
-    zoomControl: true,
-    scrollwheel: false,
-    draggable: true
-  });
-
-  var styles = [
-    {
-      stylers: [
-        { hue: '#D3D3D3' },
-        { saturation: -100 },
-        { lightness: -10 }
-      ]
-    },
-    {
-      featureType: 'road',
-      elementType: 'geometry',
-      stylers: [
-        { lightness: 100 },
-        { visibility: 'simplified' }
-      ]
-    },
-    {
-      featureType: 'road',
-      elementType: 'labels',
-      stylers: [
-        { visibility: 'off' }
-      ]
-    }
-  ];
-
-  // Create google maps marker for each prison camp
-  window.camp14Marker = new google.maps.Marker();
-  window.camp15Marker = new google.maps.Marker();
-  window.camp16Marker = new google.maps.Marker();
-  window.camp25Marker = new google.maps.Marker();
-
-  window.map.setOptions({ styles: styles });
-}
+/* eslint-disable no-undef */
 
 (function() {
   'use strict';
+
+  let map;
+  let camp14Marker;
+  let camp15Marker;
+  let camp16Marker;
+  let camp25Marker;
+
+  window.initMap = function() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 40.3, lng: 127.8 },
+      zoom: 6,
+      disableDefaultUI: true,
+      zoomControl: true,
+      scrollwheel: false,
+      draggable: true
+    });
+
+    var styles = [
+      {
+        stylers: [
+          { hue: '#D3D3D3' },
+          { saturation: -100 },
+          { lightness: -10 }
+        ]
+      }, {
+        featureType: 'road',
+        elementType: 'geometry',
+        stylers: [
+          { lightness: 100 },
+          { visibility: 'simplified' }
+        ]
+      }, {
+        featureType: 'road',
+        elementType: 'labels',
+        stylers: [
+          { visibility: 'off' }
+        ]
+      }
+    ];
+
+    // Create google maps marker for each prison camp
+    camp14Marker = new google.maps.Marker();
+    camp15Marker = new google.maps.Marker();
+    camp16Marker = new google.maps.Marker();
+    camp25Marker = new google.maps.Marker();
+
+    map.setOptions({ styles });
+  };
 
   $('.first-header').fadeIn(3000, function() {
     $('.second-header').fadeIn(3000);
@@ -55,31 +59,31 @@ function initMap() {
   $('.scrollspy').scrollSpy();
 
   // Initialize Materialize materialbox for enlarging images
-  $(document).ready(function() {
-    $('.materialboxed').materialbox();
-  });
+  $('.materialboxed').materialbox();
 
   // Set positions and titles for google maps markers of each prison camp
   var setMapMarkers = function(camps) {
-    var camp14Pos = { lat: camps.camp14.latitude, lng: camps.camp14.longitude };
+    camp14Marker.setPosition({
+      lat: camps.camp14.latitude,
+      lng: camps.camp14.longitude
+    });
+    camp15Marker.setPosition({
+      lat: camps.camp15.latitude,
+      lng: camps.camp15.longitude
+    });
+    camp16Marker.setPosition({
+      lat: camps.camp16.latitude,
+      lng: camps.camp16.longitude
+    });
+    camp25Marker.setPosition({
+      lat: camps.camp25.latitude,
+      lng: camps.camp25.longitude
+    });
 
-    window.camp14Marker.setPosition(camp14Pos);
-    window.camp14Marker.setTitle(camps.camp14.name);
-
-    var camp15Pos = { lat: camps.camp15.latitude, lng: camps.camp15.longitude };
-
-    window.camp15Marker.setPosition(camp15Pos);
-    window.camp15Marker.setTitle(camps.camp15.name);
-
-    var camp16Pos = { lat: camps.camp16.latitude, lng: camps.camp16.longitude };
-
-    window.camp16Marker.setPosition(camp16Pos);
-    window.camp16Marker.setTitle(camps.camp16.name);
-
-    var camp25Pos = { lat: camps.camp25.latitude, lng: camps.camp25.longitude };
-
-    window.camp25Marker.setPosition(camp25Pos);
-    window.camp25Marker.setTitle(camps.camp25.name);
+    camp14Marker.setTitle(camps.camp14.name);
+    camp15Marker.setTitle(camps.camp15.name);
+    camp16Marker.setTitle(camps.camp16.name);
+    camp25Marker.setTitle(camps.camp25.name);
   };
 
   var fadeInContent = function() {
@@ -90,53 +94,50 @@ function initMap() {
   };
 
   // Create and append list elements for the details about each camp
-  var createDetails = function(arr) {
+  const createDetails = function(arr) {
     $('.details').empty();
-    for (var i = 0; i < arr.length; i++) {
-      $('.details').append($('<li>' + arr[i] + '</li>'));
+
+    for (const elem of arr) {
+      const $li = $('<li>').text(elem);
+      $('.details').append($li);
     }
   };
 
   // Create and append paragraph elements for the testimonials about each camp
-  var createTestimonials = function(arr) {
+  const createTestimonials = function(arr) {
     $('.testimonials').empty();
-    var $h4 = $('<h4>').text('Testimonials');
 
+    const $h4 = $('<h4>').text('Testimonials');
     $h4.addClass('center-align ebony-clay-text');
     $('.testimonials').append($h4);
-    for (var i = 0; i < arr.length; i++) {
-      $('.testimonials').append($('<p>' + arr[i] + '</p>'));
+    for (const elem of arr) {
+      const $p = $('<p>').text(elem);
+      $('.testimonials').append($p);
     }
   };
 
-  $('.book-img').on('mouseenter', function(event) {
+  $('.book-img').on('mouseenter', (event) => {
     $(event.target).addClass('z-depth-5');
   });
-  $('.book-img').on('mouseleave', function(event) {
+  $('.book-img').on('mouseleave', (event) => {
     $(event.target).removeClass('z-depth-5');
   });
 
-  var $xhr = $.getJSON('https://aqk5q11wx9.execute-api.us-east-1.amazonaws.com/test');
+  const $xhr = $.getJSON('https://aqk5q11wx9.execute-api.us-east-1.amazonaws.com/test');
 
-  $xhr.done(function(data) {
-    if ($xhr.status !== 200) {
-      Materialize.toast('Something went wrong. Please try again', 4000);
-
-      return;
-    }
-
+  $xhr.done((data) => {
     setMapMarkers(data);
 
-    var showCamp14 = function(camp14Info, $target) {
-      window.camp14Marker.setMap(window.map);
-      window.camp15Marker.setMap(null);
-      window.camp16Marker.setMap(null);
-      window.camp25Marker.setMap(null);
+    const showCamp14 = function(camp14Info, $target) {
+      camp14Marker.setMap(map);
+      camp15Marker.setMap(null);
+      camp16Marker.setMap(null);
+      camp25Marker.setMap(null);
 
       $('.camp-name').removeClass('active-button');
       $target.addClass('active-button');
 
-      $('.camp-info').fadeOut(500, function() {
+      $('.camp-info').fadeOut(500, () => {
         $('.camp-info>h3').text(camp14Info.name);
         $('.size').text(camp14Info.size);
         $('.location').text(camp14Info.location);
@@ -153,10 +154,10 @@ function initMap() {
     };
 
     var showCamp15 = function(camp15Info, $target) {
-      window.camp14Marker.setMap(null);
-      window.camp15Marker.setMap(window.map);
-      window.camp16Marker.setMap(null);
-      window.camp25Marker.setMap(null);
+      camp14Marker.setMap(null);
+      camp15Marker.setMap(map);
+      camp16Marker.setMap(null);
+      camp25Marker.setMap(null);
 
       $('.camp-name').removeClass('active-button');
       $target.addClass('active-button');
@@ -178,10 +179,10 @@ function initMap() {
     };
 
     var showCamp16 = function(camp16Info, $target) {
-      window.camp14Marker.setMap(null);
-      window.camp15Marker.setMap(null);
-      window.camp16Marker.setMap(window.map);
-      window.camp25Marker.setMap(null);
+      camp14Marker.setMap(null);
+      camp15Marker.setMap(null);
+      camp16Marker.setMap(map);
+      camp25Marker.setMap(null);
 
       $('.camp-name').removeClass('active-button');
       $target.addClass('active-button');
@@ -203,10 +204,10 @@ function initMap() {
     };
 
     var showCamp25 = function(camp25Info, $target) {
-      window.camp14Marker.setMap(null);
-      window.camp15Marker.setMap(null);
-      window.camp16Marker.setMap(null);
-      window.camp25Marker.setMap(window.map);
+      camp14Marker.setMap(null);
+      camp15Marker.setMap(null);
+      camp16Marker.setMap(null);
+      camp25Marker.setMap(map);
 
       $('.camp-name').removeClass('active-button');
       $target.addClass('active-button');
@@ -227,10 +228,10 @@ function initMap() {
       $('.satellite-photo').fadeOut(500);
     };
 
-    $('.camp-buttons').on('click', function(event) {
-      var $target = $(event.target);
+    $('.camp-buttons').on('click', (event) => {
+      const $target = $(event.target);
 
-      $('.map-dialog').fadeOut(100, function() {
+      $('.map-dialog').fadeOut(100, () => {
         if ($target.text().trim() === 'Camp Number 14') {
           showCamp14(data.camp14, $target);
         }
@@ -247,7 +248,7 @@ function initMap() {
     });
   });
 
-  $xhr.fail(function() {
+  $xhr.fail(() => {
     Materialize.toast('Something went wrong. Please try again', 4000);
   });
 })();
